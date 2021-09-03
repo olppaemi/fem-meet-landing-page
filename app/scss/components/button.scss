@@ -1,0 +1,34 @@
+@use '../util' as *;
+
+.btn {
+  font-family: inherit;
+  font-size: rem(16);
+  font-weight: 900;
+  width: rem(193);
+  height: rem(58);
+  background-color: var(--dark-cyan);
+  border-radius: rem(29);
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+
+  .version {
+    color: var(--cyan);
+  }
+
+  &:hover {
+    background-color: hsl(192, 54%, 64%);
+  }
+
+  &.btn--violet {
+    background-color: var(--dark-violet);
+
+    .version {
+      color: var(--light-violet);
+    }
+
+    &:hover {
+      background-color: hsl(267, 54%, 71%);
+    }
+  }
+}

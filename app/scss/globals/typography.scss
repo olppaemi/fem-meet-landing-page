@@ -1,0 +1,43 @@
+@use '../util' as *;
+
+h1 {
+	font-size: rem(64);
+	font-weight: 900;
+	line-height: rem(64);
+	color: var(--black);
+
+	@include breakpoint-down(large) {
+		font-size: rem(48);
+		line-height: rem(48);
+	}
+
+	@include breakpoint-down(small) {
+		font-size: rem(40);
+		line-height: rem(44);
+	}
+}
+
+h2 {
+	font-size: rem(40);
+	font-weight: 900;
+	line-height: rem(44);
+	color: var(--black);
+}
+
+body {
+	font-size: rem(18);
+	font-weight: 500;
+	line-height: rem(26);
+	color: var(--gray);
+
+	@include breakpoint-down(large) {
+		font-size: rem(16);
+	}
+}
+
+.overline {
+	font-size: rem(16);
+	line-height: rem(26);
+	letter-spacing: rem(4);
+	color: var(--dark-cyan);
+}

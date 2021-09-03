@@ -1,0 +1,142 @@
+@use '../util' as *;
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.header {
+	width: 100%;
+
+	&__logo {
+		width: 100%;
+		padding-top: rem(80);
+		padding-bottom: rem(60);
+		text-align: center;
+
+		@include breakpoint-down(large) {
+			padding-top: rem(48);
+		}
+	}
+
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		margin-bottom: rem(110);
+
+		@include breakpoint-down(large) {
+			flex-direction: column;
+		}
+
+		&::before {
+			display: block;
+			content: "";
+			width: rem(820);
+			height: rem(303);
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translateX(rem(-32));
+			background: no-repeat url(/assets/desktop/image-hero-left.png);
+
+			@include breakpoint-down(large) {
+				position: static;
+				transform: initial;
+				background: no-repeat url(/assets/tablet/image-hero.png);
+			}
+
+			@include breakpoint-down(small) {
+				width: rem(414);
+				height: rem(153);
+				background-size: cover;
+			}
+		}
+
+		&::after {
+			display: block;
+			content: "";
+			width: 100%;
+			height: rem(300);
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			transform: translateX(77%);
+			background: no-repeat url(/assets/desktop/image-hero-right.png);
+
+			@include breakpoint-down(large) {
+				display: none;
+			}
+		}
+
+		.wrapper {
+			max-width: rem(540);
+			text-align: center;
+			padding-top: rem(48);
+
+			@include breakpoint-down(large) {
+				max-width: rem(457);
+				padding-top: rem(72);
+			}
+		}
+	}
+
+	&__headline {
+		margin-bottom: rem(34);
+		padding: 0 rem(48);
+
+		@include breakpoint-down(large) {
+			margin-bottom: rem(24);
+		}
+	}
+
+	&__text {
+		margin-bottom: rem(32);
+	}
+
+	&__buttons {
+		margin-bottom: rem(7);
+		& > * + * {
+			margin-left: rem(16);
+		}
+
+		:last-child {
+			width: rem(139);
+		}
+
+		@include breakpoint-down(small) {
+			display: flex;
+			flex-direction: column;
+
+			align-items: center;
+
+			& > * + * {
+				margin: 0;
+				margin-top: rem(16);
+			}
+		}
+	}
+}
+
+.number1 {
+	display: flex;
+	justify-content: center;
+	margin-bottom: rem(64);
+}
+
+.main {
+	max-width: 1110px;
+	margin: 0 auto;
+}
+
+.images-container {
+	display: flex;
+	justify-content: space-between;
+
+	img {
+		max-width: rem(255);
+		height: 100%;
+		border-radius: rem(8);
+	}
+}

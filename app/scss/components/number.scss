@@ -1,0 +1,25 @@
+@use '../util' as *;
+
+.number {
+  width: rem(56);
+  height: rem(140);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .vline {
+    width: 0.5px;
+    height: rem(84);
+    border-right: 1px solid var(--gray);
+  }
+
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(56);
+    height: rem(56);
+    border: 1px solid var(--gray);
+    border-radius: 50%;
+  }
+}
