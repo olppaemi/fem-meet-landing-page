@@ -3,6 +3,7 @@
 .container {
 	max-width: 1440px;
 	margin: 0 auto;
+	overflow-x: hidden;
 }
 
 .header {
@@ -28,6 +29,11 @@
 
 		@include breakpoint-down(large) {
 			flex-direction: column;
+			margin-bottom: rem(80);
+		}
+
+		@include breakpoint-down(small) {
+			margin-bottom: rem(64);
 		}
 
 		&::before {
@@ -62,7 +68,7 @@
 			position: absolute;
 			bottom: 0;
 			right: 0;
-			transform: translateX(77%);
+			transform: translateX(75%);
 			background: no-repeat url(/assets/desktop/image-hero-right.png);
 
 			@include breakpoint-down(large) {
@@ -79,6 +85,11 @@
 				max-width: rem(457);
 				padding-top: rem(72);
 			}
+
+			@include breakpoint-down(small) {
+				max-width: rem(327);
+				padding-top: rem(38);
+			}
 		}
 	}
 
@@ -88,6 +99,10 @@
 
 		@include breakpoint-down(large) {
 			margin-bottom: rem(24);
+		}
+
+		@include breakpoint-down(small) {
+			padding: 0;
 		}
 	}
 
@@ -125,18 +140,151 @@
 	margin-bottom: rem(64);
 }
 
-.main {
-	max-width: 1110px;
-	margin: 0 auto;
-}
-
 .images-container {
 	display: flex;
 	justify-content: space-between;
+	max-width: 1110px;
+	margin: 0 auto rem(80);
+
+	@include breakpoint-down(large) {
+		max-width: 689px;
+		margin-bottom: rem(48);
+	}
+
+	@include breakpoint-down(small) {
+		max-width: 327px;
+		margin-bottom: rem(64);
+		flex-wrap: wrap;
+	}
 
 	img {
 		max-width: rem(255);
 		height: 100%;
 		border-radius: rem(8);
+
+		@include breakpoint-down(large) {
+			max-width: rem(164);
+		}
+
+		@include breakpoint-down(small) {
+			max-width: rem(151);
+			margin-bottom: rem(24);
+		}
+	}
+}
+
+.info1 {
+	display: flex;
+	justify-content: center;
+	margin-bottom: rem(72);
+
+	@include breakpoint-down(large) {
+		margin-bottom: rem(80);
+	}
+
+	@include breakpoint-down(small) {
+		margin-bottom: rem(64);
+	}
+}
+
+.info1-container {
+	width: rem(540);
+	height: rem(240);
+	text-align: center;
+
+	@include breakpoint-down(large) {
+		width: rem(573);
+	}
+
+	@include breakpoint-down(small) {
+		width: rem(327);
+	}
+
+	.overline {
+		margin-bottom: rem(16);
+
+		@include breakpoint-down(small) {
+			margin-bottom: rem(24);
+		}
+	}
+
+	h2 {
+		padding: 0 rem(48);
+		margin-bottom: rem(32);
+
+		@include breakpoint-down(large) {
+			padding: 0 rem(63);
+		}
+
+		@include breakpoint-down(small) {
+			padding: 0;
+		}
+	}
+}
+
+.number2 {
+	display: flex;
+	justify-content: center;
+	transform: translateY(rem(28));
+}
+
+.info2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: rem(308);
+	background: center / cover no-repeat url(/assets/desktop/image-footer.jpg), var(--dark-cyan);
+	background-blend-mode: soft-light;
+
+	@include breakpoint-down(large) {
+		height: rem(428);
+		background: center / cover no-repeat url(/assets/tablet/image-footer.jpg), var(--dark-cyan);
+		background-blend-mode: soft-light;
+	}
+
+	@include breakpoint-down(large) {
+		height: rem(428);
+		background: center / cover no-repeat url(/assets/tablet/image-footer.jpg), var(--dark-cyan);
+		background-blend-mode: soft-light;
+	}
+}
+
+.info2-container {
+	width: 1110px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	@include breakpoint-down(large) {
+		width: 689px;
+		height: 270px;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	@include breakpoint-down(small) {
+		width: 327px;
+	}
+
+	h2 {
+		color: var(--white);
+		width: rem(350);
+	}
+
+	p {
+		color: var(--white);
+		width: rem(350);
+
+		@include breakpoint-down(large) {
+			font-size: rem(18);
+			width: rem(573);
+		}
+
+		@include breakpoint-down(small) {
+			font-size: rem(18);
+			width: 100%;
+		}
 	}
 }

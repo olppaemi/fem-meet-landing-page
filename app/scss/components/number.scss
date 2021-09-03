@@ -14,6 +14,7 @@
   }
 
   .circle {
+    font-weight: 900;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,5 +22,6 @@
     height: rem(56);
     border: 1px solid var(--gray);
     border-radius: 50%;
+    background: #fff;
   }
 }

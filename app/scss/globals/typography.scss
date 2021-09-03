@@ -22,6 +22,11 @@ h2 {
 	font-weight: 900;
 	line-height: rem(44);
 	color: var(--black);
+
+	@include breakpoint-down(small) {
+		font-size: rem(32);
+		line-height: rem(36);
+	}
 }
 
 body {
@@ -37,7 +42,9 @@ body {
 
 .overline {
 	font-size: rem(16);
+	font-weight: 900;
 	line-height: rem(26);
 	letter-spacing: rem(4);
 	color: var(--dark-cyan);
+	text-transform: uppercase;
 }
